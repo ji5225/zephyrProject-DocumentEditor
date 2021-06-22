@@ -2,11 +2,11 @@
 ## Framework used : Django
 
 ## Imp Links::-->
-<li>
-  <ul>
+<ul>
+  <li>
     <a href="https://fonts.google.com/icons?icon.query=align"> google Icons</a>
-  </ul>
-  <ul>
+  </li>
+  <li>
     <a href="https://useiconic.com/open"> Bootstarp Icons</a>
-  </ul>
-</li>
+  </li>
+</ul>
