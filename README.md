@@ -1,4 +1,4 @@
-# zephyrProject-DocumentEditor
+# Online DocumentEditor
 ## Framework used : Django
 
 ## Imp Links::-->
