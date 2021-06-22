@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+
+<body>
+
+    <div style="padding-left: 20%;">
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="https://image.flaticon.com/icons/png/512/984/984142.png" id="icon" alt="User Icon" height="50px"
+                style="padding: 30px;" />
+        </div>
+
+        <h2>Sign up Form</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% if field.help_text %}
+                    <small style="color: grey"> <br>{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </p>
+            {% endfor %}
+            <button type="submit" class="fadeIn fourth">Sign up</button>
+        </form>
+        <p style="font-size: 10px;">Already a user?  <a href="login"> Click Here  </a>  to login.</p>
+    </div>
+</body>
+
+</html>

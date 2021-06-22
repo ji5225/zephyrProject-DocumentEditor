@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <div style="background-color:black; text-align: center; font-size: 12px; color: white;">
+    Welcome <strong>{{request.user}}</strong>
+  </div>
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title> {% block title %}{% endblock title %} | ProDoc</title>
+    <style>
+     .icon {
+  background: url('http://s.mobileread.com/i/icons/icon7.gif');
+  height: 16px;
+  width: 16px;
+  display: block;
+  /* Other styles here */
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">ProDoc</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  dropdownMenu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/services">Programming</a></li>
+                  <li><a class="dropdown-item" href="/services">Android Studio - Java projects</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/services">AI-ML-DL Projetcs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--For doc-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <div>
+            <a class="navbar-brand" href="#">File</a>
+            <span style="font-size: 20px; color: #acacac;"> | </span>
+            <img src="{% static 'icon/outline_format_align_left_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <img src="{% static 'icon/outline_format_align_center_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <img src="{% static 'icon/outline_format_align_right_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <img src="{% static 'icon/outline_format_align_justify_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <span style="color:rgb(0, 102, 255);">--</span> <span style="font-size: 20px; color: #acacac;">|</span><span style="color:rgb(0, 102, 255);">--</span>
+            
+           
+            <img src="{% static 'icon/outline_format_indent_decrease_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <img src="{% static 'icon/outline_format_indent_increase_white_36dp.png' %}" height="30px" width="30px" alt="">
+            <span style="color:rgb(0, 102, 255);">--</span> <span style="font-size: 20px; color: #acacac;">|</span><span style="color:rgb(0, 102, 255);">--</span>
+          </div>
+        </div>
+        
+      </nav>
+      {% block body %}{% endblock body %}
+  </body>
+</html>
